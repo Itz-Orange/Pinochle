@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A4EAE3"
+    tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Team A"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    app:layout_constraintTop_toTopOf="@+id/textView9"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/bid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text=": Bid"
+                    android:textSize="32dp"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toTopOf="@+id/team_A_nines"
+                    app:layout_constraintStart_toEndOf="@+id/editTextNumberA"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Team B"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="@id/pinochleB"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editTextNumberA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="3"
+                    android:textColor="#000000"
+                    android:textSize="32dp"
+                    android:inputType="number"
+                    tools:layout_editor_absoluteX="25dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8"
+                    app:layout_constraintStart_toStartOf="@+id/textView8"/>
+
+                <Button
+                    android:id="@+id/team_A_nines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="teamnines"
+                    android:text="Nines"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@+id/editTextNumberA"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextNumberA" />
+
+                <Button
+                    android:id="@+id/jacks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="teamjacks"
+                    android:text="Jacks"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/team_A_nines"
+                    app:layout_constraintStart_toStartOf="@+id/team_A_nines"/>
+
+                <Button
+                    android:id="@+id/queens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="teamqueens"
+                    android:text="Queens"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/jacks"
+                    app:layout_constraintStart_toStartOf="@+id/jacks"/>
+
+                <Button
+                    android:id="@+id/kings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="teamkings"
+                    android:text="Kings"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/queens"
+                    app:layout_constraintStart_toStartOf="@+id/queens"/>
+
+                <Button
+                    android:id="@+id/pinochle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="teampinochle"
+                    android:text="Pinochle"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/kings"
+                    app:layout_constraintStart_toStartOf="@+id/kings"/>
+                <Button
+                    android:id="@+id/pinochleB3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:onClick="pinochle3"
+                    android:text="x2"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@+id/pinochle"
+                    app:layout_constraintStart_toEndOf="@+id/pinochle"/>
+
+                <Button
+                    android:id="@+id/marriage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="teammarriage"
+                    android:text="Marriage"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/pinochle"
+                    app:layout_constraintStart_toStartOf="@+id/pinochle"/>
+
+                <Button
+                    android:id="@+id/marriagetrump"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="teammarriagetrump"
+                    android:text="Marriage Trump"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/marriage"
+                    app:layout_constraintStart_toStartOf="@+id/marriage"/>
+
+                <Button
+                    android:id="@+id/trumpa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="teamrun"
+                    android:text="Run"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/marriagetrump"
+                    app:layout_constraintStart_toStartOf="@+id/marriagetrump"/>
+                <Button
+                    android:id="@+id/trumpadouble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="run2"
+                    android:text="x2"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toTopOf="@+id/trumpa"
+                    app:layout_constraintStart_toEndOf="@+id/trumpa"/>
+
+                <Button
+                    android:id="@+id/aces"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="teamaces"
+                    android:text="Aces"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/trumpa"
+                    app:layout_constraintStart_toStartOf="@+id/trumpa"/>
+                <Button
+                    android:id="@+id/acesC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="aces2"
+                    android:text="x2"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toTopOf="@+id/aces"
+                    app:layout_constraintStart_toEndOf="@+id/aces"/>
+
+                <TextView
+                    android:id="@+id/tvmentiona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="32dp"
+                    android:text="00"
+                    android:textColor="#000000"
+                    tools:layout_editor_absoluteX="138dp"
+                    tools:layout_editor_absoluteY="522dp"
+                    app:layout_constraintTop_toBottomOf="@+id/aces"
+                    app:layout_constraintStart_toStartOf="@+id/aces"/>
+
+                <EditText
+                    android:id="@+id/editTextNumber2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="3"
+                    android:textSize="32dp"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    tools:layout_editor_absoluteX="87dp"
+                    tools:layout_editor_absoluteY="517dp"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintTop_toBottomOf="@+id/tvmentiona"
+                    app:layout_constraintStart_toStartOf="@+id/tvmentiona"/>
+
+                <Button
+                    android:id="@+id/ninesB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:onClick="nines"
+                    android:text="Nines"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@+id/pinochleB"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextNumberA" />
+
+                <Button
+                    android:id="@+id/jacksB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="jacks"
+                    android:text="Jacks"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@+id/pinochleB"
+                    app:layout_constraintTop_toBottomOf="@+id/ninesB" />
+
+                <Button
+                    android:id="@+id/queensB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="queens"
+                    android:text="Queens"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/jacksB"
+                    app:layout_constraintStart_toStartOf="@+id/pinochleB"/>
+                <Button
+                    android:id="@+id/kingsB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="kings"
+                    android:text="Kings"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@+id/queensB"
+                    app:layout_constraintBottom_toTopOf="@id/pinochleB"
+                    app:layout_constraintStart_toStartOf="@+id/pinochleB"/>
+                <Button
+                    android:id="@+id/pinochleB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="pinochle"
+                    android:text="Pinochle"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@+id/kingsB"
+                    app:layout_constraintEnd_toStartOf="@+id/pinochleB2"/>
+
+                <Button
+                    android:id="@+id/pinochleB2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="pinochle2"
+                    android:text="x2"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/pinochleB" />
+                <Button
+                    android:id="@+id/marriageB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="marriage"
+                    android:text="Marriage"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/pinochleB"
+                    app:layout_constraintStart_toStartOf="@+id/pinochleB"/>
+
+                <Button
+                    android:id="@+id/marriagetrumpB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="marriagetrump"
+                    android:text="Marriage Trump"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/marriageB"
+                    app:layout_constraintStart_toStartOf="@+id/marriageB"/>
+
+                <Button
+                    android:id="@+id/trumpB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="run"
+                    android:text="Run"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@+id/marriagetrumpB"
+                    app:layout_constraintStart_toStartOf="@+id/marriagetrumpB"/>
+
+                <Button
+                    android:id="@+id/acesB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="aces"
+                    android:text="Aces"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@+id/trumpB"
+                    app:layout_constraintStart_toStartOf="@+id/trumpB"/>
+                <TextView
+                    android:id="@+id/tvmentionB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="32dp"
+                    android:text="00"
+                    android:textColor="#000000"
+                    tools:layout_editor_absoluteX="138dp"
+                    tools:layout_editor_absoluteY="522dp"
+                    app:layout_constraintTop_toBottomOf="@+id/acesB"
+                    app:layout_constraintStart_toStartOf="@+id/acesB"/>
+
+                <Button
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="scoreTotal"
+                    android:text="Score >"
+                    android:textSize="25sp"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvmentionB"
+                    app:layout_constraintStart_toStartOf="@+id/tvmentionB"
+                    app:layout_constraintTop_toTopOf="@+id/reset_bid"/>
+
+
+                <Button
+                    android:id="@+id/reset_bid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="reset"
+                    android:textSize="25sp"
+                    android:text="Reset"
+                    tools:layout_editor_absoluteX="99dp"
+                    tools:layout_editor_absoluteY="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+                    app:layout_constraintStart_toStartOf="@+id/editTextNumber2"/>
+                <TextView
+                    android:id="@+id/tricks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text=":Tricks"
+                    android:textSize="32dp"
+                    android:textColor="#000000"
+                    app:layout_constraintBottom_toBottomOf="@id/editTextNumber2"
+                    app:layout_constraintStart_toEndOf="@+id/editTextNumber2"
+                    app:layout_constraintTop_toTopOf="@id/editTextNumber2"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
